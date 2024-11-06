@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+    char alphabet[27];
+    for (i = 0; i < 26; i++) {
+        alphabet[i] = 'A' + i;
+    }
+    alphabet[26] = '\0'; // Null-terminate the string
+
+    printf("Alphabet: %s\n", alphabet);
+
+    return 0;
+}
