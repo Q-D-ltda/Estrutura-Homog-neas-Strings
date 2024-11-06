@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	int i;
+    char frase[51];
+    char fraseSemEspacos[51];
+    int j = 0;
+
+    printf("Digite uma frase de até 50 caracteres: ");
+    fgets(frase, 51, stdin);
+
+    for (i = 0; i < strlen(frase); i++) {
+        if (frase[i] != ' ') {
+            fraseSemEspacos[j] = frase[i];
+            j++;
+        }
+    }
+    fraseSemEspacos[j] = '\0';
+
+    printf("Frase sem espaços: %s\n", fraseSemEspacos);
+
+    return 0;
+}
