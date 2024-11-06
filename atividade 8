@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nome[50];
+    int idade;
+    float peso;
+    char alimentado[4];
+    char resfriado[4];
+
+    printf("Informe seu primeiro nome: ");
+    scanf("%s", nome);
+
+    printf("Informe sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Informe seu peso (kg): ");
+    scanf("%f", &peso);
+
+    printf("Está bem alimentado? (sim/nao): ");
+    scanf("%s", alimentado);
+
+    printf("Está resfriado? (sim/nao): ");
+    scanf("%s", resfriado);
+
+    if (idade >= 16 && idade <= 69 && peso >= 50 && strcmp(alimentado, "sim") == 0 && strcmp(resfriado, "nao") == 0) {
+        printf("%s, você está apto a doar sangue.\n", nome);
+    } else {
+        printf("%s, você não está apto a doar sangue.\n", nome);
+    }
+
+    return 0;
+}
